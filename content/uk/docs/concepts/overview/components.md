@@ -1,6 +1,21 @@
 ---
 reviewers:
 - lavalamp
+title: Компоненти Kubernetes
+content_type: concept
+description: >
+  Кластер Kubernetes складається з компонентів, що представляють площину управління
+  і набір машин (machines), які називаються nodes.
+weight: 20
+card: 
+  name: concepts
+  weight: 20
+---
+
+<!--
+---
+reviewers:
+- lavalamp
 title: Kubernetes Components
 content_type: concept
 description: >
@@ -11,13 +26,34 @@ card:
   name: concepts
   weight: 20
 ---
+-->
 
 <!-- overview -->
-When you deploy Kubernetes, you get a cluster.
+<!--When you deploy Kubernetes, you get a cluster.
 {{< glossary_definition term_id="cluster" length="all" prepend="A Kubernetes cluster consists of">}}
+-->
+Коли ви розгортаєте Kubernetes, ви отримуєте кластер. 
 
-This document outlines the various components you need to have for
+<!--A Kubernetes cluster consists of a set of worker machines, called nodes, 
+that run containerized applications. Every cluster has at least one worker node.
+-->
+Кластер Kubernetes складаєтсья з набору робочих машин, які звуться nodes 
+і які запсукають контейнеризовані застосунки. Кожен кластер містить принаймні один робочий node. 
+
+<!--The worker node(s) host the Pods that are the components of the application workload. 
+The control plane manages the worker nodes and the Pods in the cluster. In production 
+environments, the control plane usually runs across multiple computers and a cluster 
+usually runs multiple nodes, providing fault-tolerance and high availability.
+-->
+На робочих node(s) розміщуютсья Pods, які є компонентами робочого навантаження застосунку. 
+Площина управління керує робочими nodes і Pods в кластері. На проді 
+площина управління зазвичай запускається на багатьох комп'ютерах і в одному кластері
+зазвичай запускється багато nodes, надаючи відмовостійкість і високий рівень доступності. 
+
+<!--This document outlines the various components you need to have for
 a complete and working Kubernetes cluster.
+-->
+Цей документ окреслює різні компоненти, які вам знадобляться для повноцінно працюючого кластеру Kubernetes. 
 
 {{< figure src="/images/docs/components-of-kubernetes.svg" alt="Components of Kubernetes" caption="The components of a Kubernetes cluster" class="diagram-large" >}}
 
